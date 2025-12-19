@@ -1,0 +1,27 @@
+
+// Цвета
+$color-background: #588157;                     // фон body
+$color-panel: #dad7cd;                          // фон панели pricing-table
+$color-panel-border: #344e41;                   // граница панели
+$color-header: rgba(58, 90, 64, 0.67);         // #3a5a40aa
+$color-text: #344e41;                            // основной текст
+$color-button: #4a7049;                          // цвет текста кнопки
+$color-button-hover: rgba(88, 129, 87, 0.6);     // #5881579a
+$color-button-featured: #598957;                // кнопка is-featured
+$color-button-featured-hover: #bdb8a6;          // hover кнопки is-featured
+$color-background-overlay: rgba(58, 90, 64, 0.67); // .background
+$color-border-light: rgba(88, 129, 87, 0.188);  // для границ с прозрачностью (#58815730)
+
+// Шрифты
+$font-main: 'Open Sans', sans-serif;
+
+// Размеры и отступы
+$panel-padding: 15px 25px;
+$panel-border-radius: 10px;
+$pricing-border-radius: 15px;
+$button-padding: 15px 35px;
+$pricing-price-size: 32px;
+$pricing-header-size: 14px;
+$pricing-feature-item-size: 12px;
+$panel-max-width: 960px;
+

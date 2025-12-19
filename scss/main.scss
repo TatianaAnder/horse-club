@@ -1,0 +1,106 @@
+@use "base/variables";
+@use "base/mixins";
+
+@import url(reset.css); 
+
+
+
+html {
+  box-sizing: border-box;
+  font-family: variables.$font-main;
+}
+
+body {
+  background-color: variables.$color-background;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+.panel__pricing-table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: variables.$panel-max-width;
+  max-height: 100%;
+  border: 0.1em solid variables.$color-panel-border;
+  border-radius: variables.$panel-border-radius;
+  padding: variables.$panel-padding;
+  background-color: variables.$color-panel;
+  text-transform: uppercase;
+
+  .pricing-plan {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid variables.$color-border-light;
+    margin-bottom: 15px;
+
+    .pricing-img {
+      border-radius: variables.$pricing-border-radius;
+      opacity: 0.6;
+    }
+
+    .pricing-header {
+      color: variables.$color-header;
+      font-weight: 600;
+      font-size: variables.$pricing-header-size;
+      letter-spacing: 1px;
+      padding-top: 10px;
+    }
+
+    .pricing-feature {
+      margin: 50px 0 25px;
+      color: variables.$color-text;
+      width: 100%;
+      text-align: center;
+
+      .pricing-fiture-item {
+        font-weight: 600;
+        font-size: variables.$pricing-feature-item-size;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        padding: 15px 0;
+        border-top: 1px solid variables.$color-border-light;
+
+        &:last-child {
+          border-bottom: 1px solid variables.$color-border-light;
+        }
+      }
+    }
+
+    .pricing-price {
+      color: variables.$color-background;
+      display: block;
+      font-size: variables.$pricing-price-size;
+      font-weight: 700;
+    }
+
+    .pricing-button {
+      @include mixins.button-style(variables.$color-background, variables.$color-button, variables.$color-button-hover);
+
+      &.is-featured {
+        @include mixins.button-style(variables.$color-button-featured, aliceblue, variables.$color-button-featured-hover);
+      }
+    }
+  }
+}
+
+.background {
+  background-color: variables.$color-background-overlay;
+}
+
+@media (max-width: 990px) {
+  .panel__pricing-table {
+    flex-direction: column;
+  }
+}

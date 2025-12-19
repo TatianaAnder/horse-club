@@ -1,6 +1,11 @@
 
+# Node modules
+node_modules/
 
+# OS-specific files
 .DS_Store
 
+# Build output (если есть)
+css/style.css
 
 
