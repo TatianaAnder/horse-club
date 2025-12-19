@@ -1,0 +1,16 @@
+@use "variables";
+
+@mixin button-style($bg-color, $text-color, $hover-color) {
+  border: 1px solid variables.$color-border-light;
+  border-radius: variables.$panel-border-radius;
+  color: $text-color;
+  display: inline-block;
+  padding: variables.$button-padding;
+  text-decoration: none;
+  margin: 25px 0;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
